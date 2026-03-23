@@ -1,8 +1,12 @@
 # momijis-bot
 
-## パッケージ
+## コマンドの登録
 
-### インストール
+`bun run ./deplory-commands`
+
+## bun
+
+### ライブラリインストール
 
 `bun install {package name}`
 
