@@ -1,5 +1,5 @@
 import { Client, GatewayIntentBits } from "discord.js";
-import config from "./bot_config.json";
+import config from "../bot_config.json";
 
 const intents = [
   GatewayIntentBits.MessageContent,
