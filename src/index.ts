@@ -30,6 +30,7 @@ for (const folder of commandFolders) {
     if ('data' in command && 'execute' in command) {
       // コマンド名をキーにして、コマンドの処理全体を保存する
       commands.set(command.data.name, command);
+      console.log(`コマンド：${command.data.name}を登録しました`)
     } else {
       console.log(`[WARNING] ${filePath} に必要な "data" か "execute" がありません。`);
     }
