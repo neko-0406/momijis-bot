@@ -28,9 +28,10 @@ for (const folder of commandFolders) {
     const command = commandModule.default ? commandModule.default : commandModule;
 
     if ('data' in command && 'execute' in command) {
+      console.log(`${filePath}をコマンドモジュールとして検出しました。`)
       commands.push(command.data.toJSON());
     } else {
-      console.log(`[WARNING] ${filePath} に必要な "data" か "execute" がありません。`);
+      continue;
     }
   }
 }
