@@ -5,6 +5,7 @@ export default {
   data: new SlashCommandBuilder().setName("weather-info").setDescription("現在の仙台の天気を取得します"),
 
   async execute(interaction: ChatInputCommandInteraction) {
+    console.log("called slashcommand: weather-info");
     await interaction.deferReply();
 
     const response = await fetchWeatherData();
@@ -12,7 +13,7 @@ export default {
       const embed1 = new EmbedBuilder()
         .setTitle(`${response.data?.publicTimeFormatted}の天気`)
         .setDescription(`${response.data?.description.bodyText}`);
-      
+
       const forecasts = response.data?.forecasts;
       const embed2 = new EmbedBuilder()
       
